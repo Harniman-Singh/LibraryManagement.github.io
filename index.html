@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav_logo">Library Management</a>
+
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="#hobby" class="nav_link">Home</a>
+            <a href="#hobby" class="nav_link">Product</a>
+            <a href="#client-section" class="nav_link">Our Clients</a>
+            <a href="#contact" class="nav_link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="button" id="form-open">Login</button>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>  <!--this is for cross icon to close the form-->
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Login</h2>
+        
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+        </div>
+
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+<section  class="cart">
+
+    <section class="left">
+    <div id = "hobby" >
+        <input id="searchbar" onkeyup="search_book()" type="text"
+        name="search" placeholder="Search book by Author name, Book name, Year of publisher" >
+      
+    <!-- ordered list -->
+    <ol id='list'>
+      
+        <li class="books"> 
+            <div class="card">
+               
+            <img src="img/harry.png" alt="Harry potter book" style="width:53%">
+            <h3> The harry potter</h3>
+            <p class="price">$9.99</p>
+            <p> This is a fantasy literature</p>
+            <p>Author : Penny(2019)</p>
+            <p><button>Add to Cart</button></p>
+          </div>
+
+        </li>
+        <li class="books">
+            <div class="card">
+                <img src="img/untethered.png" alt="untethered" style="width:53%">
+                <h3>Untethered</h3>
+                <p class="price">$20.99</p>
+                <p>This is a Fiction literature</p>
+                <p>Author : Harry(2020)</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+        </li>
+        <li class="books">
+           
+                <div class="card">
+                    <img src="img/something.png" alt="Denim Jeans" style="width:53%  ">
+                    <h3>Something Nasty</h3>
+                    <p class="price">$27.99</p>
+                    <p>This is a Mystery literature</p>
+                    <p>Author : Hobby(2021)</p>
+                    <p><button>Add to Cart</button></p>
+                  </div>
+            
+        </li>
+        <li class="books">
+            <div class="card">
+                <img src="img/To bee.png" alt="To bee" style="width:53%">
+                <h3>To bee</h3>
+                <p class="price">$9.99</p>
+                <p>This is a nonfiction literature</p>
+                <p>Author : Hobby(2020)</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+        </li>
+        <li class="books">
+            <div class="card">
+                <img src="img/nigth.png" alt="night" style="width:53%">
+                <h3>Night badly</h3>
+                <p class="price">$18.99</p>
+                <p>This is a Horrer literature</p>
+                <p>Author : Penny(2021)</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+        </li>
+
+        
+    </ol>
+    </div>
+    </section>
+
+    <section class="right">
+    <div class="header1">
+        <div class="logo">CART</div>
+        <div class="cartlogo"><i class="uil uil-shopping-cart-alt">
+
+        </i> <p>0</p></div>
+    </div>
+    <div class="hob">
+        <div id="root">
+            <div class="sidebar">
+                <div class="head"><p>My cart</p></div>
+                <div class="cartitem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">$ 0.00</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+</section>
+
+
+<section id="client-section">
+    <h1 class="h-primary center">Our Partners</h1>
+    <div id="clients">
+        <div class="client-item">
+            <img src="img/coke.png" alt="Our Client">
+        </div>
+        <div class="client-item">
+            <img src="img/apple.jpg" alt="Our Client">
+        </div>
+        <div class="client-item">
+            <img src="img/google.jpg" alt="Our Client">
+        </div>
+        
+        <div class="client-item">
+            <img src="img/skype.jpg" alt="Our Client">
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h1 class="h-primary center">Contact Us</h1>
+    <div id="contact-box">
+        <form action="php.backend">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" name="name" id ="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <br>
+                <input type="email" name="name" id ="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="name">Phone Number</label>
+                <br>
+                <input type="phone" name="name" id ="phone" placeholder="Enter your phone">
+            </div>
+            <div class="form-group">
+                <label for="name">Message</label>
+                <br>
+               <textarea name="message" id="meassage" cols="17" rows="5"></textarea>
+            </div>
+            <button class="button" center>Submit</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <footer>
+
+        <table>
+            <thead>
+
+                <tr>
+                    <th>Products</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> All types of books</td>
+                </tr>
+                <tr>
+                    <td>
+                    <ul>
+                        <li>fiction</li>
+                        <li>Nonfiction</li>
+                        <li>Mystery</li>
+                        <li>Historical Fiction</li>
+                        <li>Poetry</li>
+                    </ul>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="centerf">
+            copyright &copy; www.HobbylibraryManagement.com. All rights reserved!
+        </div>
+
+
+    </footer>
+      
+</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
